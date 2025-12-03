@@ -119,7 +119,6 @@ Set Temp: 24°C
 │       ├── app_display.c     ← builds LCD text ("Fan: ON/OFF")
 │       ├── app_buttons.c
 │       ├── app_controller.c  ← thermostat control state machine
-│       └── (any other .c files you add)
 │
 │
 ├── Docs/
