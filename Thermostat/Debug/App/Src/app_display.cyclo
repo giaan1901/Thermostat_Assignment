@@ -1,5 +1,0 @@
-../App/Src/app_display.c:3:6:APP_Display_Init	1
-../App/Src/app_display.c:9:6:APP_Display_ShowWelcome	1
-../App/Src/app_display.c:18:6:APP_Display_ShowTemperature	1
-../App/Src/app_display.c:27:6:APP_Display_ShowFanState	2
-../App/Src/app_display.c:34:6:APP_Display_ShowSetTemp	1
