@@ -2,39 +2,55 @@
 #  STM32 / STM32CubeIDE .gitignore
 # ===========================
 
-# ---- Build output ----
+# ---- Build output directories ----
 Debug/
+Release/
+build/
 
-# ---- Object files ----
+# ---- Compiled objects ----
 *.o
 *.d
 
-# ---- IDE metadata ----
+# ---- Linker & binary outputs ----
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+*.asm
 
+# ---- Root-level build artifacts (CubeIDE sometimes puts these in root) ----
+makefile
+objects/
+sources/
+objects.list
+
+# ---- Eclipse / CubeIDE metadata ----
+.settings/
 .project
 .cproject
 .loadpath
 *.launch
 
-# ---- CubeMX / CubeIDE backups ----
+# ---- CubeMX / CubeIDE project files ----
 *.mxproject
 *.ioc-backup
 *.bak
 
-# ---- Auto-generated middleware docs ----
+# ---- Auto-generated middleware documentation ----
 Middlewares/*/Documentation/
 
-# ---- Log files ----
+# ---- Temporary / log files ----
 *.log
 
-# ---- Editor / OS clutter ----
+# ---- OS / Editor junk ----
 .DS_Store
 Thumbs.db
 *~
 *.swp
 *.swo
 
-# ---- Generated CMake (if using newer CubeIDE) ----
+# ---- CMake (newer CubeIDE versions) ----
 CMakeFiles/
 cmake_install.cmake
 CMakeCache.txt
