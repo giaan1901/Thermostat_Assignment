@@ -93,31 +93,41 @@ Set Temp: 24°C
 │       ├── main.c
 │       ├── lcd_i2c.c
 │       ├── buttons.c
-│       ├── thermostat.c      ← contains ON/OFF logic
+│       ├── thermostat.c
 │       └── eeprom_emulation.c
 │
-├── BSP/                      ← hardware access
-│   ├── bsp_lcd.c
-│   ├── bsp_lcd.h
-│   ├── bsp_buttons.c
-│   ├── bsp_buttons.h
-│   ├── bsp_temp_sensor.c
-│   └── bsp_temp_sensor.h
 │
-├── App/                      ← application logic (UI + control)
-│   ├── app_display.c         ← builds LCD text, including "Fan: ON/OFF"
-│   ├── app_display.h
-│   ├── app_buttons.c
-│   ├── app_buttons.h
-│   ├── app_controller.c      ← state machine + ON/OFF thermostat
-│   └── app_controller.h
+├── BSP/                      ← Board Support Package
+│   ├── Inc/
+│   │   ├── bsp_lcd.h
+│   │   ├── bsp_buttons.h
+│   │   └── bsp_temp_sensor.h
+│   │
+│   └── Src/
+│       ├── bsp_lcd.c
+│       ├── bsp_buttons.c
+│       └── bsp_temp_sensor.c
+│
+│
+├── App/                      ← Application logic (UI + State Machine)
+│   ├── Inc/
+│   │   ├── app_display.h
+│   │   ├── app_buttons.h
+│   │   └── app_controller.h
+│   │
+│   └── Src/
+│       ├── app_display.c     ← builds LCD text ("Fan: ON/OFF")
+│       ├── app_buttons.c
+│       ├── app_controller.c  ← thermostat control state machine
+│       └── (any other .c files you add)
+│
 │
 ├── Docs/
-│   ├── README.md
 │   ├── wiring_diagram.png
 │   └── state_machine_diagram.png
 │
 └── .gitignore
+
 
 ```
 
