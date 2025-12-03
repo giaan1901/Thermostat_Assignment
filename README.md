@@ -14,7 +14,6 @@ It monitors room temperature (0–60 °C), allows the user to set a target tempe
 ---
 
 ## ✨ Features  
-- **Temperature Monitoring** every **500 ms**  
 - **1°C resolution** from 0°C → 60°C  
 - **16×2 I2C LCD** user interface  
 - **User-configurable temperature threshold**  
