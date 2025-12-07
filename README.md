@@ -145,6 +145,7 @@ Set Temp: 24°C
 │       ├── app_controller.c  ← thermostat control state machine
 │
 │
+├── Driver/ 
 │
 └── .gitignore
 
