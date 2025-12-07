@@ -8,9 +8,9 @@
 ---
 
 ## 📌 Overview  
-This project implements a simple **thermostat controller** using the STM32F411CEU6 microcontroller.  
-It monitors room temperature (0–60 °C), allows the user to set a target temperature, and controls the cooling fan using a classic **ON/OFF control algorithm**.  
-Link demo: youtube.com/shorts/3tvuNk2aANw?si=dCEA6Z_6EXf8-yEP
+- This project implements a simple **thermostat controller** using the STM32F411CEU6 microcontroller.  
+- It monitors room temperature (0–60 °C), allows the user to set a target temperature, and controls the cooling fan using a classic **ON/OFF control algorithm**.  
+- Link demo: youtube.com/shorts/3tvuNk2aANw?si=dCEA6Z_6EXf8-yEP
 ---
 
 ## ✨ Features  
