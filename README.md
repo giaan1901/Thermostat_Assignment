@@ -20,7 +20,6 @@ It monitors room temperature (0–60 °C), allows the user to set a target tempe
 - **ON/OFF cooling control**  
 - **Four-button control system**  
 - **Fan status displayed on LCD**
-- **EEPROM storage** for the last temperature set point
 - Add **hysteresis** (±1°C) to reduce relay switching  
 
 ---
@@ -32,6 +31,33 @@ It monitors room temperature (0–60 °C), allows the user to set a target tempe
 | **16×2 I2C LCD** | For UI and temperature display |
 | **4× Push Buttons** | Power, Set, Up, Down |
 | **Temperature Sensor** | LM35 |
+
+---
+
+## 🔌 Pin Connections (STM32F411CEU6 Thermostat Project)
+
+### 🟦 Buttons (Active-Low, Pull-Up Enabled)
+| Function | STM32 Pin | Wiring |
+|---------|-----------|--------|
+| POWER Button | PA1 | PA1 → Button → GND |
+| SET Button   | PA2 | PA2 → Button → GND |
+| UP Button    | PA3 | PA3 → Button → GND |
+| DOWN Button  | PA4 | PA4 → Button → GND |
+
+### 🟩 LCD 16x2 with I2C Backpack (PCF8574)
+| LCD Pin | STM32 Pin |
+|---------|-----------|
+| SCL     | PB6 (I2C1_SCL) |
+| SDA     | PB7 (I2C1_SDA) |
+| VCC     | 5V |
+| GND     | GND |
+
+### 🟦 LM35 Temperature Sensor
+| LM35 Pin | STM32 Pin |
+|----------|-----------|
+| Vout     | PA0 (ADC1_IN0) |
+| VCC      | 5V |
+| GND      | GND |
 
 ---
 
@@ -87,14 +113,12 @@ Set Temp: 24°C
 │   │   ├── lcd_i2c.h
 │   │   ├── buttons.h
 │   │   ├── thermostat.h
-│   │   └── eeprom_emulation.h
 │   │
 │   └── Src/
 │       ├── main.c
 │       ├── lcd_i2c.c
 │       ├── buttons.c
 │       ├── thermostat.c
-│       └── eeprom_emulation.c
 │
 │
 ├── BSP/                      ← Board Support Package
@@ -121,9 +145,6 @@ Set Temp: 24°C
 │       ├── app_controller.c  ← thermostat control state machine
 │
 │
-├── Docs/
-│   ├── wiring_diagram.png
-│   └── state_machine_diagram.png
 │
 └── .gitignore
 
