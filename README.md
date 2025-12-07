@@ -166,7 +166,7 @@ Set Temp: 24°C
 ## 🛠️ Future Improvements  
 - Add **PID control** for smoother response  
 - Add **Buzzer** notification
-
+- Add **Eeprom** to store the last set temperture.
 ---
 
 ## 📜 License  
